@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-products',
@@ -8,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class ProductsComponent implements OnInit {
 
   constructor() { }
+
+  faChevronDown = faChevronDown;
 
   ngOnInit(): void {
   }

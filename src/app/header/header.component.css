@@ -1,0 +1,15 @@
+nav {
+  height: 100px;
+}
+
+
+.main-img-container {
+  height: 350px;
+  width: 100%;
+}
+
+.main-img-container img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
