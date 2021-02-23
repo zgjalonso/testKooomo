@@ -1,29 +1,36 @@
 
-<div class="banner-main container-fluid d-flex">
-  <div class="banner-title-box">
-    <a class="banner-title" href="#"><u>Get free items with your purchases - Click here</u></a>
-  </div>
-  <div class="language-box">
-    <p>EN <fa-icon [icon]="faSortDown"></fa-icon> / </p>
-    <p>Shipping to <b>IT</b> <fa-icon [icon]="faSortDown"></fa-icon></p>
-  </div>
+<div class="banner-main container-fluid text-light bg-dark d-flex">
+    <div class="col-4"></div>
+    <div class="col-4 text-center banner-div banner-title-box">
+      <a class="banner-title text-reset" href="#"><u>Get free items with your purchases - Click here</u></a>
+    </div>
+    <div class="col-4 text-end language-box">
+      <span>EN <fa-icon [icon]="faSortDown"></fa-icon> / </span>
+      <span>Shipping to <b>IT</b> <fa-icon [icon]="faSortDown"></fa-icon></span>
+    </div>
 </div>
 
-<nav class="d-flex justify-content-between">
+<nav class="d-flex justify-content-between align-items-center container-fluid">
   <div class="logo-box">
-    <img src="" alt="Moto GP Store Logo">
+    <img src="data:image/png;base64,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" alt="Moto GP Store Logo">
   </div>
   <div class="menu-links-box">
-    <ul class="menu-links">
+    <ul class="menu-links d-flex p-0 text-center mb-0">
       <li class="menu-link"><strong>MotoGP Fans</strong></li>
       <li class="menu-link"><strong>MOTORCYCLE BRANDS</strong></li>
       <li class="menu-link"><strong>eSPORTS</strong></li>
       <li class="menu-link"><strong>BLACK FRIDAY 2020</strong></li>
     </ul>
   </div>
-  <div class="menu-icons-and-logo">
-    <div class="menu-icons-box">
-      <img src="assets/search-svgrepo-com.svg" alt="helmet">
+  <div class="menu-icons-and-logo d-flex align-items-center">
+    <div class="menu-icons-box d-flex">
+      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 52.966 52.966" style="enable-background:new 0 0 52.966 52.966;" xml:space="preserve">
+        <path d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
+          c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279
+          C52.074,52.304,52.086,51.671,51.704,51.273z M21.983,40c-10.477,0-19-8.523-19-19s8.523-19,19-19s19,8.523,19,19
+          S32.459,40,21.983,40z"/>
+      </svg>
       <div class="icon-and-notification">
         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              viewBox="0 0 471.701 471.701" style="enable-background:new 0 0 471.701 471.701;" xml:space="preserve">
@@ -41,26 +48,61 @@
           <span>0</span>
         </div>
       </div>
-      <img src="assets/helmet-svgrepo-com.svg" alt="helmet">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 175.349 175.349" style="enable-background:new 0 0 175.349 175.349;" xml:space="preserve">
+        <g>
+          <g>
+            <g>
+              <path d="M147.825,23.273C133.898,8.265,114.527,0,93.281,0h-5.766C44.73,0,9.766,34.041,8.222,76.465
+                c-0.017,0.14-0.074,0.268-0.074,0.412v2.509v35.298v0.694c0,0.07,0.036,0.133,0.041,0.203
+                c0.215,19.012,7.194,37.295,19.771,51.562c0.673,0.766,1.636,1.186,2.625,1.186c0.308,0,0.617-0.041,0.923-0.123l127.589-34.857
+                c1.189-0.325,2.119-1.254,2.449-2.441c1.432-5.158,2.358-10.463,2.755-15.764l2.673-35.701
+                C168.562,58.239,161.76,38.291,147.825,23.273z M15.149,79.84l72.902-12.175c5.932-0.988,10.652,0.103,12.941,2.997
+                c2.287,2.895,2.259,7.735-0.075,13.279l-11.412,27.094l-74.356,0.804V79.84z M159.995,78.924l-2.673,35.701
+                c-0.314,4.194-0.991,8.391-2.017,12.503L31.802,160.867c-9.869-11.894-15.588-26.622-16.473-42.029l76.547-0.825
+                c1.394-0.014,2.647-0.858,3.187-2.143l12.303-29.21c3.406-8.084,3.093-15.306-0.882-20.337
+                c-3.975-5.031-10.934-7.003-19.585-5.561L15.487,72.687C18.881,35.905,49.872,7,87.515,7h5.766
+                c19.277,0,36.825,7.472,49.414,21.034C155.29,41.607,161.434,59.681,159.995,78.924z"/>
+              <path d="M130.648,77c-7.72,0-14,6.279-14,14s6.28,14,14,14c7.72,0,14-6.279,14-14S138.367,77,130.648,77z M130.648,98
+                c-3.86,0-7-3.141-7-7s3.139-7,7-7s7,3.141,7,7S134.508,98,130.648,98z"/>
+              <path d="M94.623,74.526c-1.367-1.367-3.582-1.367-4.949,0l-10.5,10.5c-1.367,1.367-1.367,3.582,0,4.949
+                C79.857,90.658,80.752,91,81.648,91s1.791-0.342,2.475-1.025l10.5-10.5C95.99,78.108,95.99,75.893,94.623,74.526z"/>
+              <path d="M153.598,138.093L42.341,168.472c-1.866,0.509-2.965,2.434-2.456,4.3c0.426,1.555,1.835,2.577,3.375,2.577
+                c0.304,0,0.615-0.041,0.923-0.123l111.257-30.379c1.866-0.509,2.965-2.434,2.456-4.3
+                C157.385,138.684,155.454,137.587,153.598,138.093z"/>
+            </g>
+          </g>
+        </g>
+      </svg>
       <div class="icon-and-notification">
-        <img src="assets/bag-svgrepo-com.svg" alt="helmet">
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 511 511" style="enable-background:new 0 0 511 511;" xml:space="preserve">
+          <path d="M445.663,469.921l-14.362-359.041C430.968,102.537,424.165,96,415.814,96H351v-0.5C351,42.841,308.159,0,255.5,0
+            S160,42.841,160,95.5V96H95.187c-8.351,0-15.153,6.536-15.488,14.88L65.337,469.921c-0.434,10.842,3.468,21.122,10.985,28.946
+            C83.84,506.691,93.956,511,104.806,511h301.389c10.851,0,20.966-4.309,28.484-12.133
+            C442.195,491.042,446.097,480.763,445.663,469.921z M175,95.5c0-44.388,36.112-80.5,80.5-80.5S336,51.112,336,95.5V96H175V95.5z
+             M423.862,488.474c-4.663,4.853-10.938,7.526-17.667,7.526H104.806c-6.73,0-13.004-2.672-17.667-7.525
+            c-4.663-4.853-7.083-11.229-6.813-17.954L94.687,111.48c0.011-0.27,0.23-0.48,0.5-0.48H160v48.5c0,4.142,3.358,7.5,7.5,7.5
+            s7.5-3.358,7.5-7.5V111h161v48.5c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5V111h64.814c0.269,0,0.488,0.21,0.499,0.48
+            l14.362,359.041C430.944,477.245,428.524,483.621,423.862,488.474z"/>
+        </svg>
         <div class="notification">
           <span>0</span>
         </div>
       </div>
     </div>
     <div class="motogp-logo-box">
-      <img src="" alt="Moto gp Logo">
+      <img src="https://s.mwscdn.io/websitesharedfiles/dealer/logo/es/909000328_en_ie_logo_2020930101047240.png" alt="Moto gp Logo">
     </div>
   </div>
 </nav>
 
-  <p class="text-center">Home / MotoGP FANS / Shop by Riders / 46 Valentino Rossi</p>
-  <div class="container-fluid main-image-box">
+  <p class="text-center menu-links-box mt-2 mb-2">Home / MotoGP FANS / Shop by Riders / 46 Valentino Rossi</p>
+  <div class="main-image-box position-relative text-light">
     <div class="main-image-textBox">
-      <h1>Valentino Rossi</h1>
-      <h2>Official Merchandising</h2>
-      <p>If Valentino is your favourite MotoGP rider, you're in the right place to buy all the official
+      <h1 class="fs-3">VR46 Valentino Rossi</h1>
+      <h2 class="fs-5">Official Merchandising</h2>
+      <p class="main-image-description">If Valentino is your favourite MotoGP rider, you're in the right place to buy all the official
       VR46 merchandising of the Italian Yamaha team rider. Show how much of a fan you are and support him on
       and off the circuits. For this new season, there are T-shirts, Rossi sweatshirts, Valentino caps and
       so much more VR46. Choose wht you like best and enjoy the race.</p>
