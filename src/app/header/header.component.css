@@ -66,6 +66,8 @@ nav {
 
 .menu-links-box {
   font-size: .7rem;
+  height: 100%;
+  width: auto;
 }
 
 .menu-link {

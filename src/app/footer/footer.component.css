@@ -1,0 +1,68 @@
+
+.links-newsletter-section {
+  padding-top: 4rem;
+}
+
+.links-container {
+
+}
+
+.links-lists {
+  padding-top: 30px;
+}
+
+.footer-links {
+  padding-top: 30px;
+  padding-left: 0;
+}
+
+.customer-care {
+  padding-top: 24px;
+}
+
+.footer-link {
+  list-style: none;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.category-title {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.newsletter-box {
+  margin-left: 8.33333333%;
+}
+
+.newsletter-box p {
+  margin: 30px 0;
+}
+
+.logo-box {
+  padding: 2rem 0;
+}
+
+.logo-box img {
+  opacity: .1;
+}
+
+.terms-conditions-section {
+  border-top: 1px solid #2b2a2a;
+  color: #696969;
+  font-size: 12px;
+  padding: 27px;
+  font-weight: bold;
+}
+
+.payment-logo-box img {
+  width: 45px;
+  margin: 0 10px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.sitemap-privacy-box a {
+  color: dimgrey;
+  margin-left: 1.5rem;
+}
