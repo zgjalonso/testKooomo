@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-  font-family: "FS Joey";
-}
 
 @import url(//db.onlinewebfonts.com/c/342e95d629a08ee0db807f03f69d0c5f?family=MotoGP+Display+Bold);
 @import url(//db.onlinewebfonts.com/c/4c418fddb193fdc55a68a0040c1414cf?family=FS+Joey);
@@ -23,6 +19,12 @@
   url("//db.onlinewebfonts.com/t/4c418fddb193fdc55a68a0040c1414cf.woff") format("woff"),
   url("//db.onlinewebfonts.com/t/4c418fddb193fdc55a68a0040c1414cf.ttf") format("truetype"),
   url("//db.onlinewebfonts.com/t/4c418fddb193fdc55a68a0040c1414cf.svg#FS Joey") format("svg"); }
+
+* {
+  box-sizing: border-box;
+  font-family: "FS Joey";
+}
+
 
 body {
   padding-top: 95px;
