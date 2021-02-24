@@ -24,6 +24,11 @@
   url("//db.onlinewebfonts.com/t/4c418fddb193fdc55a68a0040c1414cf.ttf") format("truetype"),
   url("//db.onlinewebfonts.com/t/4c418fddb193fdc55a68a0040c1414cf.svg#FS Joey") format("svg"); }
 
+body {
+  padding-top: 95px;
+  overflow: hidden;
+}
+
 svg {
   height: 1.5rem;
   width: 1.5rem;

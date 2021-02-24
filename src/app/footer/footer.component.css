@@ -39,6 +39,46 @@
   margin: 30px 0;
 }
 
+.input-box input {
+  border-radius: 28.5px;
+  width: 55%;
+  height: 50px;
+  background-color: #2b2a2a;
+  border: none;
+  font-size: 14px;
+  padding-left: 21px;
+  color: white;
+  outline: none;
+}
+
+.submit-box {
+  position: absolute;
+  left: 42%;
+}
+
+.submit-box button {
+  border-radius: 28.5px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 14px;
+  justify-content: space-between;
+  background: linear-gradient(
+    180deg
+    ,#c80502 0,#700b0b 100%,#700b0b 100%);
+  color: white;
+  height: 50px;
+  border-style: none;
+  font-size: 14px;
+  line-height: 1rem;
+}
+
+button svg {
+  height: auto;
+  width: auto;
+}
+
 .logo-box {
   padding: 2rem 0;
 }

@@ -1,4 +1,31 @@
 
+.page-banner {
+  font-size: .7rem;
+}
+
+.main-img-container {
+  height: 350px;
+  width: 100%;
+}
+
+.main-img-container img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.main-image-textBox {
+  position: absolute;
+  top: 3rem;
+  left: 5rem;
+  z-index: 1;
+  width: 30%;
+}
+
+.main-image-description {
+  font-size: .7rem;
+}
+
 .product-filters {
   height: 3rem;
   align-items: center;
@@ -31,6 +58,10 @@
 
 .product-layout-container {
   padding: 0 45px;
+  padding-top: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 12px;
 }
 
 .product-card {
@@ -44,11 +75,16 @@
 .product-card-img {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: auto;
 }
 
 .product-img-container {
   height: 150px;
+  width: auto;
+}
+
+.product-img {
+  height: 100%;
 }
 
 .discount-tag {

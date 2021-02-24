@@ -1,6 +1,13 @@
+.sticky-bar {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+}
+
 nav {
   height: 70px;
   border-bottom: 1px solid #C4C4C4;
+  background-color: white;
 }
 
 .motogp-logo-box {
@@ -53,17 +60,6 @@ nav {
   font-weight: bold;
 }
 
-.main-img-container {
-  height: 350px;
-  width: 100%;
-}
-
-.main-img-container img {
-  height: 350px;
-  width: 100%;
-  object-fit: cover;
-}
-
 .menu-links-box {
   font-size: .7rem;
   height: 100%;
@@ -75,14 +71,4 @@ nav {
   margin: 0 1rem;
 }
 
-.main-image-textBox {
-  position: absolute;
-  top: 3rem;
-  left: 5rem;
-  z-index: 1;
-  width: 30%;
-}
 
-.main-image-description {
-  font-size: .7rem;
-}
