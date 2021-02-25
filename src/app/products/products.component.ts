@@ -13,6 +13,7 @@ export class ProductsComponent implements OnInit {
   public products = [];
   public parsedSellPrices = [];
   public parsedDiscountPrices = [];
+  public discountPercentages = [];
   constructor(private productService: ConfigService) { }
 
   faChevronDown = faChevronDown;
@@ -24,6 +25,8 @@ export class ProductsComponent implements OnInit {
       .subscribe(data => this.parseSellPrices());
    this.productService.getProducts()
       .subscribe(data => this.parseDiscountPrices());
+   this.productService.getProducts()
+      .subscribe(data => this.percentageCalc());
   }
 
   // tslint:disable-next-line:typedef
@@ -51,6 +54,19 @@ export class ProductsComponent implements OnInit {
       parsedDiscountPriceArr = parseFloat(parsedDiscountPrice).toFixed(2);
       this.parsedDiscountPrices.push(parsedDiscountPriceArr);
       this.products[i].price.to_discount = this.parsedDiscountPrices[i];
+    }
+  }
+
+  // tslint:disable-next-line:typedef
+  percentageCalc(){
+    let discountPrice;
+    let discountPercArr;
+    // tslint:disable-next-line:typedef
+    for (let i = 0; i < this.products.length; i++) {
+      discountPrice = this.products[i].promotions.discount * 100;
+      discountPercArr = Math.round(discountPrice / this.products[i].price.to_discount);
+      this.discountPercentages.push(discountPercArr);
+      this.products[i].promotions.discountPercentage = this.discountPercentages[i];
     }
   }
 }

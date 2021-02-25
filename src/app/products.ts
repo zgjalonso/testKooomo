@@ -9,6 +9,7 @@ export interface Products {
   };
   promotions: {
     discount: number;
+    discountPercentage: number;
   };
   images: {
     medium: string;

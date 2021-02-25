@@ -58,7 +58,7 @@
                 <img src="{{ product.images.medium }}" alt="{{ product.name }}" class="product-img">
               </div>
               <div class="discount-container">
-                <div class="discount-tag"><span><b>25%</b></span></div>
+                <div class="discount-tag"><span><b>{{ product.promotions.discountPercentage }}%</b></span></div>
               </div>
             </div>
             <p class="mb-0"><b>{{ product.name }}</b></p>
