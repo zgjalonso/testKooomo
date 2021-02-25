@@ -11,7 +11,8 @@ import {ConfigService} from '../config/config.service';
 export class ProductsComponent implements OnInit {
 
   public products = [];
-  public parsedSellPrice: string;
+  public parsedSellPrices = [];
+  public parsedDiscountPrices = [];
   constructor(private productService: ConfigService) { }
 
   faChevronDown = faChevronDown;
@@ -19,15 +20,37 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
    this.productService.getProducts()
      .subscribe(data => this.products = data);
-   this.parseNum();
-   console.log(parseFloat('119').toFixed(2));
+   this.productService.getProducts()
+      .subscribe(data => this.parseSellPrices());
+   this.productService.getProducts()
+      .subscribe(data => this.parseDiscountPrices());
   }
 
   // tslint:disable-next-line:typedef
-  parseNum() {
-    for (let i = 0; i < this.products.length; i++) {
-      this.parsedSellPrice = parseFloat(this.products[i].price.sell.toString()).toFixed(2);
+  parseSellPrices(){
+  // tslint:disable-next-line:typedef
+    let parsedSellPrice;
+    let parsedSellPriceArr;
+      // tslint:disable-next-line:typedef
+      for (let i = 0; i < this.products.length; i++) {
+      parsedSellPrice = this.products[i].price.sell.toString();
+      parsedSellPriceArr = parseFloat(parsedSellPrice).toFixed(2);
+      this.parsedSellPrices.push(parsedSellPriceArr);
+      this.products[i].price.sell = this.parsedSellPrices[i];
     }
-    return this.parsedSellPrice;
+  }
+
+  // tslint:disable-next-line:typedef
+  parseDiscountPrices(){
+    // tslint:disable-next-line:typedef
+    let parsedDiscountPrice;
+    let parsedDiscountPriceArr;
+    // tslint:disable-next-line:typedef
+    for (let i = 0; i < this.products.length; i++) {
+      parsedDiscountPrice = this.products[i].price.to_discount.toString();
+      parsedDiscountPriceArr = parseFloat(parsedDiscountPrice).toFixed(2);
+      this.parsedDiscountPrices.push(parsedDiscountPriceArr);
+      this.products[i].price.to_discount = this.parsedDiscountPrices[i];
+    }
   }
 }
