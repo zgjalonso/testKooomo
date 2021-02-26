@@ -1,5 +1,5 @@
-<app-header></app-header>
+<app-header  (searchVal)='searchValue($event)'></app-header>
 <section>
-  <app-products></app-products>
+  <app-products [search]="search" ></app-products>
   <app-footer></app-footer>
 </section>

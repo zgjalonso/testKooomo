@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'testKooomo';
+  search: any;
+  // tslint:disable-next-line:typedef
+  searchValue(e) {
+    this.search = e;
+  }
 }
 
-console.log('test');
+
+
+
