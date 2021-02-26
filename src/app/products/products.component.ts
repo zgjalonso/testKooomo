@@ -16,6 +16,7 @@ export class ProductsComponent implements OnInit {
   public discountPercentages = [];
   public searchValue: string;
   public searchResults = [];
+  public quantity;
   @Input('search') search: string;
   constructor(private productService: ConfigService) { }
 
@@ -40,6 +41,7 @@ export class ProductsComponent implements OnInit {
     this.parseSellPrices();
     this.parseDiscountPrices();
     this.percentageCalc();
+    this.quantity = this.products.length;
   }
 
   parseResults() {
@@ -49,6 +51,8 @@ export class ProductsComponent implements OnInit {
     this.parseSearchSellPrices();
     this.parseSearchDiscountPrices();
     this.percentageSearchCalc();
+    this.quantity = this.searchResults.length;
+
   }
   // tslint:disable-next-line:typedef
   parseSellPrices(){
