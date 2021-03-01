@@ -15,7 +15,6 @@ export class ProductsComponent implements OnInit {
   public parsedDiscountPrices = [];
   public discountPercentages = [];
   public searchValue: string;
-  public searchResults = [];
   public quantity;
   @Input('search') search: string;
   constructor(private productService: ConfigService) { }
@@ -31,10 +30,16 @@ export class ProductsComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   ngOnChanges() {
+    this.products = [];
+    this.parsedSellPrices = [];
+    this.parsedDiscountPrices = [];
+    this.discountPercentages = [];
+    console.log(this.products + 'array vacio');
     this.productService.getSearch(this.search)
-      .subscribe(data => this.searchResults = data);
+      .subscribe(data => this.products = data);
     this.productService.getSearch(this.search)
-      .subscribe(() => this.parseResults());
+      .subscribe(() => this.parseProducts());
+    console.log(this.products + 'array');
   }
   // tslint:disable-next-line:typedef
   parseProducts() {
@@ -44,16 +49,6 @@ export class ProductsComponent implements OnInit {
     this.quantity = this.products.length;
   }
 
-  parseResults() {
-    this.parsedSellPrices = [];
-    this.parsedDiscountPrices = [];
-    this.discountPercentages = [];
-    this.parseSearchSellPrices();
-    this.parseSearchDiscountPrices();
-    this.percentageSearchCalc();
-    this.quantity = this.searchResults.length;
-
-  }
   // tslint:disable-next-line:typedef
   parseSellPrices(){
   // tslint:disable-next-line:typedef
@@ -95,44 +90,4 @@ export class ProductsComponent implements OnInit {
     }
   }
 
-  // tslint:disable-next-line:typedef
-  parseSearchSellPrices(){
-    // tslint:disable-next-line:typedef
-    let parsedSellPrice;
-    let parsedSellPriceArr;
-    // tslint:disable-next-line:typedef
-    for (let i = 0; i < this.searchResults.length; i++) {
-      parsedSellPrice = this.searchResults[i].price.sell.toString();
-      parsedSellPriceArr = parseFloat(parsedSellPrice).toFixed(2);
-      this.parsedSellPrices.push(parsedSellPriceArr);
-      this.searchResults[i].price.sell = this.parsedSellPrices[i];
-    }
-  }
-
-  // tslint:disable-next-line:typedef
-  parseSearchDiscountPrices(){
-    // tslint:disable-next-line:typedef
-    let parsedDiscountPrice;
-    let parsedDiscountPriceArr;
-    // tslint:disable-next-line:typedef
-    for (let i = 0; i < this.searchResults.length; i++) {
-      parsedDiscountPrice = this.searchResults[i].price.to_discount.toString();
-      parsedDiscountPriceArr = parseFloat(parsedDiscountPrice).toFixed(2);
-      this.parsedDiscountPrices.push(parsedDiscountPriceArr);
-      this.searchResults[i].price.to_discount = this.parsedDiscountPrices[i];
-    }
-  }
-
-  // tslint:disable-next-line:typedef
-  percentageSearchCalc(){
-    let discountPrice;
-    let discountPercArr;
-    // tslint:disable-next-line:typedef
-    for (let i = 0; i < this.searchResults.length; i++) {
-      discountPrice = this.searchResults[i].promotions.discount * 100;
-      discountPercArr = Math.round(discountPrice / this.searchResults[i].price.to_discount);
-      this.discountPercentages.push(discountPercArr);
-      this.searchResults[i].promotions.discountPercentage = this.discountPercentages[i];
-    }
-  }
 }
