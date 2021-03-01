@@ -34,12 +34,10 @@ export class ProductsComponent implements OnInit {
     this.parsedSellPrices = [];
     this.parsedDiscountPrices = [];
     this.discountPercentages = [];
-    console.log(this.products + 'array vacio');
     this.productService.getSearch(this.search)
       .subscribe(data => this.products = data);
     this.productService.getSearch(this.search)
       .subscribe(() => this.parseProducts());
-    console.log(this.products + 'array');
   }
   // tslint:disable-next-line:typedef
   parseProducts() {
